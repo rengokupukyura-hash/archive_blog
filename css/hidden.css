@@ -1,0 +1,131 @@
+/* 背景だけ暗く */
+body {
+  background: #0b0b0b;
+  color: #cfcfcf;
+}
+
+/* コンテナはそのまま、色だけ */
+.container {
+  background: #111;
+}
+
+/* 見出し */
+header h1 {
+  color: #e6e6e6;
+}
+
+.subtitle {
+  color: #777;
+}
+
+/* 本文 */
+article p {
+  color: #cfcfcf;
+}
+
+/* リンク */
+a {
+  color: #8ab4f8;
+}
+
+a:hover {
+  color: #a6c8ff;
+}
+
+/* サイドバー全体 */
+.sidebar {
+  background: #0f0f0f;
+}
+
+/* プロフィール枠 */
+.sidebar .box {
+  background: #0f0f0f;
+}
+
+/* プロフィール見出し */
+.sidebar h3 {
+  color: #bfbfbf;
+  border-bottom: 1px solid #222;
+}
+
+/* プロフィール本文 */
+.sidebar p,
+.sidebar li {
+  color: #9a9a9a;
+}
+
+/* プロフィール画像の縁 */
+.profile-img {
+  border: 1px solid #222;
+}
+
+header {
+  position: relative;
+  background-image: url("../img/sunflower.png");
+  background-size: cover;
+  background-position: center;
+  color: #e6e6e6;
+}
+
+/* 暗いオーバーレイ */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* 闇度 */
+  z-index: 0;
+}
+
+/* 文字を前面に */
+header h1,
+header .subtitle {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  border-bottom: 1px solid #222;
+}
+
+header h1 {
+  letter-spacing: 0.15em;
+}
+
+article h2 {
+  font-weight: normal;
+}
+
+.room {
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* 検索結果 横並び */
+.search-result .result-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* テキスト側 */
+.result-text {
+  flex: 1;
+}
+
+/* サムネイル */
+.result-thumb img {
+  width: 200px;
+  height: auto;
+  border: 1px solid #222;
+  opacity: 0.85;
+}
+
+.search-result a {
+  font-size: 0.9em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+
